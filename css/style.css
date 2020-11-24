@@ -1,0 +1,85 @@
+
+        body{
+            text-align: center;
+            background-image: url(/img/motif.jpg);
+            background-position: top;
+            background-attachment: fixed;
+            
+        }
+
+        .cssTache{
+
+            display: flex;
+            justify-content: center;
+            border: 1px solid rgba(180, 180, 197, 0.3);
+            padding: 10px 4px;
+            margin-bottom: 4px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f6f6f4;
+            border-radius: 4px;
+            -webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28); 
+            box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28);
+            
+        }
+
+        .cssTache div {
+            padding: 10px;
+            margin: 0 20px;
+        }
+
+        input {
+            padding: 10px 30px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        #monContainer{
+            display: block;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+            text-shadow: 0px 1px 0px white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+        }
+
+        .monTexte{
+            font-family: 'Dancing Script', cursive;
+            font-size: 26px;
+            width: 300px;
+            text-shadow: 0px 1px 0px white
+        }
+
+        .valider{color:blue}
+
+        .effacer{color: red}
+
+
+        #maCarte{
+            background-color: grey;
+        }
+
+        #reset{
+            color: black;
+            font-size: 12px;
+        }
+
+        .divReset{
+        margin: 12px;
+        height: 20px;
+        }
+
+        i{
+            font-size: 24px;
+            text-shadow: 0px 1px 0px white;
+            color: #6e85a1;
+        }
+
+        #myBtn{
+
+            background-color: #abccf6;
+        }
