@@ -1,85 +1,121 @@
+html {
+    scroll-behavior: smooth;
+}
+     
+body{
+    text-align: center;
+    /* background-image: url(../img/motif.jpg); */
+    background-image: url(../img/gradient.png);
+    background-color: #cbd5de;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: contain;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
 
-        body{
-            text-align: center;
-            background-image: url(/img/motif.jpg);
-            background-position: top;
-            background-attachment: fixed;
-            
-        }
+.cssTache{
 
-        .cssTache{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(180, 180, 197, 0.3);
+    padding: 10px 4px;
+    margin-bottom: 4px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f6f6f4;
+    border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28); 
+    box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28);
+    
+}
 
-            display: flex;
-            justify-content: center;
-            border: 1px solid rgba(180, 180, 197, 0.3);
-            padding: 10px 4px;
-            margin-bottom: 4px;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: #f6f6f4;
-            border-radius: 4px;
-            -webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28); 
-            box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.28);
-            
-        }
+.cssTache div {
+    padding: 10px;
+    margin: 0 20px;
+}
 
-        .cssTache div {
-            padding: 10px;
-            margin: 0 20px;
-        }
+input {
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,0.28);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
 
-        input {
-            padding: 10px 30px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
+#monContainer{
+    display: block;
+    text-align: center;
+}
 
-        #monContainer{
-            display: block;
-            text-align: center;
-        }
+h1{
+    text-align: center;
+    text-shadow: 0px 1px 0px white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
 
-        h1{
-            text-align: center;
-            text-shadow: 0px 1px 0px white;
-            font-family: 'Dancing Script', cursive;
-            font-size: 40px;
-        }
+.monTexte{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    width: 300px;
+    text-shadow: 0px 1px 0px white;
+    color: #6e85a1;
+}
 
-        .monTexte{
-            font-family: 'Dancing Script', cursive;
-            font-size: 26px;
-            width: 300px;
-            text-shadow: 0px 1px 0px white
-        }
+#maCarte{
+    background-color: grey;
+}
 
-        .valider{color:blue}
+#reset{
+    color: #425c5a;
+    font-size: 12px;
+}
 
-        .effacer{color: red}
+.divReset{
+margin: 12px;
+height: 20px;
+}
+
+i{
+    font-size: 24px;
+    text-shadow: 0px 1px 0px white;
+    color: #6e85a1;
+}
+
+#myBtn{
+
+    background-color:#92d5ff;
+    color: #6e85a1;
+}
+
+.fa-check-circle
+    { cursor: no-drop;
+    color: #6e85a1; }
+
+.fa-calendar, .fa-calendar-times{
+    color: #6e85a1;
+}
 
 
-        #maCarte{
-            background-color: grey;
-        }
+.valide{
+    background-color: rgb(232, 255, 117);
+}
 
-        #reset{
-            color: black;
-            font-size: 12px;
-        }
 
-        .divReset{
-        margin: 12px;
-        height: 20px;
-        }
-
-        i{
-            font-size: 24px;
-            text-shadow: 0px 1px 0px white;
-            color: #6e85a1;
-        }
-
-        #myBtn{
-
-            background-color: #abccf6;
-        }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #6e85a1;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #6e85a1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #6e85a1;
+  }
