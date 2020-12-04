@@ -13,112 +13,127 @@ let maListeDesTaches=[]
 // compteur pour déterminer quelle position dans le Json à importer et l'objet à commencer ou continuer 
 let compteur=0; 
 
-
-// *********** Check du localStorage
-// Si existe :
-
-if(localStorage.donnesSauvegardees != null){
-
-    // si il y a mon storage donnesSauvegardees dans le cache
-    // let DonnesDuCacheStorage = localStorage.getItem("donnesSauvegardees") // équivalent
-
-            const DonnesDuCacheStorage = localStorage.donnesSauvegardees;
-            console.log("Cookie existant !");
-
-            
-// *********** Création du tableau à partir du cookies
-// *********** Réinitialisation des keys 0,1,2 ... (lisibilité & continuité ajout)
-
-            function creationTableau(){
-
-                // class du picto valider
-                let monPictoClassTrue = "";
-
-                // Class fond valider
-                tacheClassTrue="cssTache";
-
-                // Initialisation de key de départ : 0
-                // let maKey = 0;
-
-                    // Mise en variable et conversion Json en Objet Js
-                    let resultat = JSON.parse(DonnesDuCacheStorage);
-
-                    // Longueur de l'array
-                    // console.log(resultat.length + " longueur de array");
-
-                    // Loop sur le tableau
-                        for (let i=0; i< resultat.length; i++) {
-
-                    maTacheAInserer =  resultat[i].tache;
-                    // console.log(maTacheAInserer + " A insérer")
+// ***
+function iOsCookie() {
 
 
-// ***********  Création des DIV *****************
+        // *********** Check du localStorage
+        // Si existe :
 
-                                // cible
-                                let PointageCible=document.getElementById("monContainer");
+        if(localStorage.donnesSauvegardees != null){
 
-                                // Création DIV
-                                let divMaTache= document.createElement("div");
-
-                                // ajout id + maKey (ex:tache 0, tache 1...))
-                                divMaTache.setAttribute("id", "tache"+ i);
-                                
-                                // ajout title (Sert de vérification au survol)
-                                // divMaTache.setAttribute("title","tache " + i);
-
-                                // ajout de class pour le design css
-                                divMaTache.setAttribute("class","cssTache");
-
-                                            // Si tache validée
-                                            if (resultat[i].etat==true) {
-                                                
-                                                monPictoClassTrue = "far fa-check-circle";
-                                                divMaTache.setAttribute("class","cssTache valide");
-                                            } 
-
-                                            else {
-
-                                                monPictoClassTrue = "far fa-calendar";
-                                                divMaTache.setAttribute("class","cssTache");
-                                            }
-
-
-// ***********  div HTML : texte / A valider / A effacer
- 
-                                divMaTache.innerHTML=
-                                    `                       
-                                    <div class="monTexte">${maTacheAInserer}</div>
-                                        <div class="valider" id="${'e'+i}" onClick="return retourDeMonClic(this.id)"><a href="#"><i id="ico${i}" class="${monPictoClassTrue}"></i></a></div>
-                                        <div class="effacer" id="${'c'+i}" onClick="return retourDeMonClic(this.id)"><a href="#"><i class="far fa-calendar-times"></i></a></div> 
-                                    `;
+            // si il y a mon storage donnesSauvegardees dans le cache
+            // let DonnesDuCacheStorage = localStorage.getItem("donnesSauvegardees") // équivalent
+            // iOs
+                    const DonnesDuCacheStorage = localStorage.donnesSauvegardees;
+                    console.log("Cookie existant !");
                   
-                                // Attacher l'ensemble des div à mon conteneur ciblé
-                                PointageCible.appendChild(divMaTache);
-                                document.body.appendChild(PointageCible);
+        // *********** Création du tableau à partir du cookies
+        // *********** Réinitialisation des keys 0,1,2 ... (lisibilité & continuité ajout)
+
+                    function creationTableau(){
+
+                        // class du picto valider
+                        let monPictoClassTrue = "";
+
+                        // Class fond valider
+                        tacheClassTrue="cssTache";
+
+                        // Initialisation de key de départ : 0
+                        // let maKey = 0;
+
+                            // Mise en variable et conversion Json en Objet Js
+                            let resultat = JSON.parse(DonnesDuCacheStorage);
 
 
-// ***********  Mise à jour et réinitialisation les key values de maListeDesTaches
-                             
-                                // Ajout de chaque donnée par loop
-                                y = {id: i, tache:resultat[i].tache, etat:resultat[i].etat}
-                                maListeDesTaches.push(y)
-
-                            } // fin boucle for
+                            // maj IOS **************************
+                            
 
 
-// *********** Storage à sauver (mis à jour)
+                            // fin IOS **************************
 
-        localStorage.setItem("donnesSauvegardees", JSON.stringify(maListeDesTaches));
+                            // Longueur de l'array
+                            // console.log(resultat.length + " longueur de array");
 
-            }
-            // Appel fonction
-            creationTableau()
+                            // Loop sur le tableau
+                                for (let i=0; i< resultat.length; i++) {
+
+                            maTacheAInserer =  resultat[i].tache;
+                            // console.log(maTacheAInserer + " A insérer")
+
+
+        // ***********  Création des DIV *****************
+
+                                        // cible
+                                        let PointageCible=document.getElementById("monContainer");
+
+                                        // Création DIV
+                                        let divMaTache= document.createElement("div");
+
+                                        // ajout id + maKey (ex:tache 0, tache 1...))
+                                        divMaTache.setAttribute("id", "tache"+ i);
+                                        
+                                        // ajout title (Sert de vérification au survol)
+                                        // divMaTache.setAttribute("title","tache " + i);
+
+                                        // ajout de class pour le design css
+                                        divMaTache.setAttribute("class","cssTache");
+
+                                                    // Si tache validée
+                                                    if (resultat[i].etat==true) {
+                                                        
+                                                        monPictoClassTrue = "far fa-check-circle";
+                                                        divMaTache.setAttribute("class","cssTache valide");
+                                                    } 
+
+                                                    else {
+
+                                                        monPictoClassTrue = "far fa-calendar";
+                                                        divMaTache.setAttribute("class","cssTache");
+                                                    }
+
+
+        // ***********  div HTML : texte / A valider / A effacer
+        
+                                        divMaTache.innerHTML=
+                                            `                       
+                                            <div class="monTexte">${maTacheAInserer}</div>
+                                                <div class="valider" id="${'e'+i}" onClick="return retourDeMonClic(this.id)"><a href="#"><i id="ico${i}" class="${monPictoClassTrue}"></i></a></div>
+                                                <div class="effacer" id="${'c'+i}" onClick="return retourDeMonClic(this.id)"><a href="#"><i class="far fa-calendar-times"></i></a></div> 
+                                            `;
+                        
+                                        // Attacher l'ensemble des div à mon conteneur ciblé
+                                        PointageCible.appendChild(divMaTache);
+                                        document.body.appendChild(PointageCible);
+
+
+        // ***********  Mise à jour et réinitialisation les key values de maListeDesTaches
+                                    
+                                        // Ajout de chaque donnée par loop
+                                        y = {id: i, tache:resultat[i].tache, etat:resultat[i].etat}
+                                        maListeDesTaches.push(y)
+
+                                    } // fin boucle for
+
+
+        // *********** Storage à sauver (mis à jour)
+
+                localStorage.setItem("donnesSauvegardees", JSON.stringify(maListeDesTaches));
+
+                    }
+                    // Appel fonction
+                    creationTableau()
+        } 
+
+
+
+                    else {
+                        console.log("Cookie non existant !");
+                    } // Fin de condition if et else
+
+
+// fin iOsCookie ****
 } 
-
-            else {
-                console.log("Cookie non existant !");
-            } // Fin de condition if et else
 
 
 // *********** Fonction Storage SET met dans cookie donnesSauvegardees la liste maListeDesTaches

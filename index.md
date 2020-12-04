@@ -31,17 +31,15 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"rel="stylesheet"/>
 
 </head>
-<body>
+<body onload="iOsCookie()">
 
-    <div id="divReset"><a href="#" onclick="reset()" id="reset">Effacer la mémoire</a></div>
+    <div id="divReset"><a href="#" onclick="reset()" id="reset">Effacer toutes les tâches (cookie)</a></div>
     <div id="maCarte"></div>
     <h1>Ma liste de tâches</h1>
     <div id="monContainer">
     <input type="text" id="todo" value="" placeholder="Ecrire ma tâche" autofocus maxlength="200">
     <input type="submit" id="myBtn" onclick="fonctionValeurInput()" >
     </div>
-
-<script type="text/javascript" src="js/todo.js"></script>
-
+    <script type="text/javascript" src="js/todo.js"></script>
 </body>
 </html>

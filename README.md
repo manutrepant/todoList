@@ -1,6 +1,6 @@
-# todoList Exercice apprentissage Javascript 
+# Exercice apprentissage Javascript 
 
-## Objectif : Apprentissage Javascript
+## Objectif : Créer une ToDo List
 
 
 <img src="https://github.com/manutrepant/todoList/blob/main/img/projet.jpg"
@@ -35,6 +35,10 @@ Création d'éléments HTML - SetAttribute - Création array, push, recherche pa
 Source du projet : <https://github.com/manutrepant/todoList>
 
 Démo HTML : <https://manutrepant.github.io/todoList/>
+
+### MAJ 1.0
+Mise à jour localStorage pour iOs
+
 
 
 
